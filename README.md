@@ -75,15 +75,15 @@ Attributes
 * jenkins['node']['ssh_private_key'] - jenkins master defaults to: `~/.ssh/id_rsa` (created by the default recipe)
 * jenkins['node']['jvm_options'] - SSH slave JVM options
 * jenkins['iptables_allow'] - if iptables is enabled, add a rule passing 'jenkins['server']['port']'
-* jenkins['nginx']['http_proxy']['variant'] - use `nginx` or `apache2` to proxy traffic to jenkins backend (`nil` by default)
+* jenkins['http_proxy']['variant'] - use `nginx` or `apache2` to proxy traffic to jenkins backend (`nil` by default)
 * jenkins['http_proxy']['www_redirect'] - add a redirect rule for 'www.*' URL requests ("disable" by default)
 * jenkins['http_proxy']['listen_ports'] - list of HTTP ports for the HTTP proxy to listen on ([80] by default)
 * jenkins['http_proxy']['host_name'] - primary vhost name for the HTTP proxy to respond to (`node['fqdn']` by default)
 * jenkins['http_proxy']['host_aliases'] - optional list of other host aliases to respond to (empty by default)
 * jenkins['http_proxy']['client_max_body_size'] - max client upload size ("1024m" by default, nginx only)
-* jenkins['http_proxy']['basic_auth'] - boolean, whether basic auth gets enabled in proxy_apache2 or not. (default true)
-* jenkins['http_proxy']['basic_auth_username'] - used in the proxy_apache2 recipe, (default jenkins)
-* jenkins['http_proxy']['basic_auth_password'] - used in the proxy_apache2 recipe, (defualt jenkins)
+* jenkins['http_proxy']['basic_auth'] - boolean, whether basic auth gets enabled in proxy_apache2/proxy_nginx or not. (default true)
+* jenkins['http_proxy']['basic_auth_username'] - used in the proxy_apache2/proxy_nginx recipe, (default jenkins)
+* jenkins['http_proxy']['basic_auth_password'] - used in the proxy_apache2/proxy_nginx recipe, (defualt jenkins)
 
 Usage
 =====
